@@ -14,10 +14,8 @@ $(document).ready(function () {
   };
 
   //TODO
-  var c = Shape.Circle(200, 200, 50);
   var d = Shape.Rectangle(250, 150, 50, 50);
 
-  c.fillColor = 'green';
   d.fillColor = 'blue';
 
   for (var x = 25; x<400; x+=50) {
@@ -29,6 +27,15 @@ $(document).ready(function () {
 
   var e = Shape.Rectangle(250,250, 50, 50);
   e.fillColor = 'yellow';
+
+  var c = Shape.Circle(200, 200, 80);
+  c.fillColor = 'black';
+
+  var text = new PointText(200, 200);
+  text.justification = 'center';
+  text.fillColor = 'white';
+  text.fontSize = 20;
+  text.content = 'hello world';
 
   paper.view.draw();
 
