@@ -2,8 +2,16 @@
 $(document).ready(function () {
   'use strict';
   console.log('main.js loaded');
+
   paper.install(window);
   paper.setup(document.getElementById('mainCanvas'));
+
+  var tool = new Tool();
+
+  tool.onMouseDown = function(event)  {
+    var c = Shape.Circle(event.point.x, event.point.y, 20);
+    c.fillColor = 'red';
+  };
 
   //TODO
   var c = Shape.Circle(200, 200, 50);
@@ -19,5 +27,9 @@ $(document).ready(function () {
     }
   }
 
+  var e = Shape.Rectangle(250,250, 50, 50);
+  e.fillColor = 'yellow';
+
   paper.view.draw();
+
 });
