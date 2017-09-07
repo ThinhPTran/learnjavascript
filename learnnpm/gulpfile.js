@@ -7,9 +7,9 @@ const eslint = require('gulp-eslint');
 gulp.task('default', function() {
   // Gulp tasks go here
   // Run ESLint
-  gulp.src(["es6/**/*.js", "public/es6/**/*.js"])
-    .pipe(eslint())
-    .pipe(eslint.format()); 
+//  gulp.src(["es6/**/*.js", "public/es6/**/*.js"])
+//    .pipe(eslint())
+//    .pipe(eslint.format()); 
 
   // Node source
   gulp.src("es6/**/*.js")
